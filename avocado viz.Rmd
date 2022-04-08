@@ -1,0 +1,26 @@
+---
+title: "avocado viz"
+author: "Hebe Guo"
+date: "4/9/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+```
+
+
+```{r}
+avocado <- avocado %>% 
+  filter(region=="Albany") 
+
+ggplot(avocado,aes(type, AveragePrice, fill=type))+
+  geom_boxplot()
+```
+
+

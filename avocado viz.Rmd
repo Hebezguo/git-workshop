@@ -24,3 +24,11 @@ ggplot(avocado,aes(type, AveragePrice, fill=type))+
 ```
 
 
+```{r}
+avocado2 <- avocado %>% 
+  filter(year=="2015") 
+
+ggplot(avocado2,aes(type, AveragePrice, fill=type))+
+  geom_boxplot()
+```
+
